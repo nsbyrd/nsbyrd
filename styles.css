@@ -363,6 +363,14 @@ hr.thin {
     margin-bottom: 1.5rem;
 }
 
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
