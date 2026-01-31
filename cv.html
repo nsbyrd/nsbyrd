@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Natalie S. Byrd</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pdf-container {
+            width: 100%;
+            height: calc(100vh - 200px);
+            min-height: 600px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .download-link {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--background-light);
+        }
+        
+        .content-section {
+            padding: 0;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Natalie S. Byrd</a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="cv.html" class="nav-link active">CV</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="nav-container">
+            <h1>Curriculum Vitae</h1>
+        </div>
+    </div>
+
+    <div class="download-link">
+        <p><a href="assets/Natalie_Byrd_CV.pdf" download>📥 Download CV as PDF</a></p>
+    </div>
+
+    <div class="content-section">
+        <div class="pdf-container">
+            <iframe src="assets/Natalie_Byrd_CV.pdf" class="pdf-viewer" title="Natalie Byrd CV">
+                <p>Your browser does not support PDFs. <a href="assets/Natalie_Byrd_CV.pdf">Download the PDF</a> to view it.</p>
+            </iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Natalie S. Byrd</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
