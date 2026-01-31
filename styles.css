@@ -173,7 +173,7 @@ hr.thin {
     margin-bottom: 0;
 }
 
-.intro-section hr {
+.intro-section > hr {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -196,7 +196,7 @@ hr.thin {
     margin-bottom: 0;
 }
 
-.contact-section hr {
+.contact-section > hr:first-of-type {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -324,7 +324,11 @@ hr.thin {
     background-color: var(--background-light);
     padding: 2rem;
     margin-bottom: 2rem;
+}
+
+.page-header .nav-container {
     text-align: center;
+    display: block;
 }
 
 .page-header h1 {
