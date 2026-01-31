@@ -170,7 +170,12 @@ hr.thin {
 /* Intro Section */
 .intro-section h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+}
+
+.intro-section hr {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .intro-section p {
@@ -187,8 +192,13 @@ hr.thin {
 }
 
 .contact-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.contact-section hr {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .contact-section h3 {
@@ -207,7 +217,22 @@ hr.thin {
 }
 
 .social-links a {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.social-links svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
 }
 
 /* Footer */
@@ -299,6 +324,7 @@ hr.thin {
     background-color: var(--background-light);
     padding: 2rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .page-header h1 {
