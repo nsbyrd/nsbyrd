@@ -119,7 +119,9 @@ hr.thin {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center 65%;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .header-overlay {
@@ -143,6 +145,8 @@ hr.thin {
     object-fit: cover;
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .header-overlay h1 {
@@ -233,6 +237,13 @@ hr.thin {
     flex-shrink: 0;
     width: 20px;
     height: 20px;
+}
+
+.social-links .social-icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* Footer */
