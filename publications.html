@@ -10,7 +10,7 @@
     <meta property="og:image" content="https://nsbyrd.github.io/nsbyrd/assets/headshot.jpg">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P46J04QB29"></script>
     <script>
@@ -45,45 +45,140 @@
     </div>
 
     <div class="content-section">
-        <!-- Publication Stats Block -->
+
+        <!-- Stats loaded dynamically from assets/scholar-stats.json via script.js -->
         <div class="pub-stats-container">
             <div class="pub-stat-card">
-                <div class="stat-number">4</div>
+                <div class="stat-number" id="stat-publications">—</div>
                 <div class="stat-label">Publications</div>
             </div>
             <div class="pub-stat-card">
-                <div class="stat-number">1</div>
+                <div class="stat-number" id="stat-citations">—</div>
                 <div class="stat-label">Citations</div>
             </div>
+            <p class="stat-updated" id="stat-updated"></p>
         </div>
-        
+
         <p>For the most up-to-date list of publications, please visit my <a href="https://scholar.google.com/citations?hl=en&user=q4ARDFIAAAAJ" target="_blank">Google Scholar profile</a>.</p>
-        
+
         <h2>Peer-Reviewed Publications</h2>
         <hr>
-        
-        <div class="publication-item">
-            <p>1. Byrd, N.S., McCabe, S.C., Robinson, J.R. (2025). Constructing connections: A phenomenological explanation of loneliness in first-year undergraduates. <em>Soaring: A Journal of Undergraduate Research, 2025</em>(1), Article 3. <a href="https://fisherpub.sjf.edu/soaring/vol2025/iss1/3" target="_blank">https://fisherpub.sjf.edu/soaring/vol2025/iss1/3</a></p>
+
+        <!-- Filter UI -->
+        <div class="pub-filter">
+            <input type="text" class="pub-filter-search" id="pubSearch"
+                placeholder="Search publications…" aria-label="Search publications">
+            <div class="pub-filter-years" role="group" aria-label="Filter by year">
+                <button class="filter-btn active" data-year="all">All Years</button>
+                <button class="filter-btn" data-year="2025">2025</button>
+                <button class="filter-btn" data-year="2024">2024</button>
+            </div>
         </div>
-        
-        <div class="publication-item">
-            <p>2. McClure Brenchley, K.J., & Byrd, N.S. (2025). Body inclusivity on campus: The creation of a student club. <em>Eye on Psi Chi, 30</em>(1). <a href="https://www.psichi.org/page/301EyeFall25Brenchley" target="_blank">https://www.psichi.org/page/301EyeFall25Brenchley</a></p>
+
+        <!-- Publication Cards -->
+        <div id="publications-list">
+
+            <div class="publication-card" data-year="2025"
+                data-text="constructing connections phenomenological loneliness first-year undergraduates byrd mccabe robinson soaring fisher">
+                <div class="pub-card-meta">
+                    <span class="pub-year-badge">2025</span>
+                    <span class="pub-topic-tag">Loneliness</span>
+                    <span class="pub-topic-tag">Qualitative</span>
+                </div>
+                <h3 class="pub-title">
+                    <a href="https://fisherpub.sjf.edu/soaring/vol2025/iss1/3" target="_blank">
+                        Constructing connections: A phenomenological explanation of loneliness in first-year undergraduates
+                    </a>
+                </h3>
+                <p class="pub-authors">Byrd, N.S., McCabe, S.C., &amp; Robinson, J.R.</p>
+                <p class="pub-journal"><em>Soaring: A Journal of Undergraduate Research, 2025</em>(1), Article 3.</p>
+                <div class="pub-actions">
+                    <a href="https://fisherpub.sjf.edu/soaring/vol2025/iss1/3" target="_blank" class="pub-badge">View Article</a>
+                    <button class="pub-badge pub-copy-citation"
+                        data-citation="Byrd, N. S., McCabe, S. C., &amp; Robinson, J. R. (2025). Constructing connections: A phenomenological explanation of loneliness in first-year undergraduates. Soaring: A Journal of Undergraduate Research, 2025(1), Article 3. https://fisherpub.sjf.edu/soaring/vol2025/iss1/3">
+                        Copy Citation
+                    </button>
+                </div>
+            </div>
+
+            <div class="publication-card" data-year="2025"
+                data-text="body inclusivity campus student club mcclure brenchley byrd eye psi chi body image dei diversity">
+                <div class="pub-card-meta">
+                    <span class="pub-year-badge">2025</span>
+                    <span class="pub-topic-tag">Body Image</span>
+                    <span class="pub-topic-tag">DEI</span>
+                </div>
+                <h3 class="pub-title">
+                    <a href="https://www.psichi.org/page/301EyeFall25Brenchley" target="_blank">
+                        Body inclusivity on campus: The creation of a student club
+                    </a>
+                </h3>
+                <p class="pub-authors">McClure Brenchley, K.J., &amp; Byrd, N.S.</p>
+                <p class="pub-journal"><em>Eye on Psi Chi, 30</em>(1).</p>
+                <div class="pub-actions">
+                    <a href="https://www.psichi.org/page/301EyeFall25Brenchley" target="_blank" class="pub-badge">View Article</a>
+                    <button class="pub-badge pub-copy-citation"
+                        data-citation="McClure Brenchley, K. J., &amp; Byrd, N. S. (2025). Body inclusivity on campus: The creation of a student club. Eye on Psi Chi, 30(1). https://www.psichi.org/page/301EyeFall25Brenchley">
+                        Copy Citation
+                    </button>
+                </div>
+            </div>
+
+            <div class="publication-card" data-year="2024"
+                data-text="loneliness nucleus psychopathology cognitive social personality disorders byrd soaring fisher">
+                <div class="pub-card-meta">
+                    <span class="pub-year-badge">2024</span>
+                    <span class="pub-topic-tag">Loneliness</span>
+                    <span class="pub-topic-tag">Psychopathology</span>
+                </div>
+                <h3 class="pub-title">
+                    <a href="https://fisherpub.sjf.edu/soaring/vol2024/iss2/4" target="_blank">
+                        Loneliness in the nucleus for psychopathology: Relationships with cognitive, social, and personality disorders
+                    </a>
+                </h3>
+                <p class="pub-authors">Byrd, N.S.</p>
+                <p class="pub-journal"><em>Soaring: A Journal of Undergraduate Research, 2024</em>(2), Article 4.</p>
+                <div class="pub-actions">
+                    <a href="https://fisherpub.sjf.edu/soaring/vol2024/iss2/4" target="_blank" class="pub-badge">View Article</a>
+                    <button class="pub-badge pub-copy-citation"
+                        data-citation="Byrd, N. S. (2024). Loneliness in the nucleus for psychopathology: Relationships with cognitive, social, and personality disorders. Soaring: A Journal of Undergraduate Research, 2024(2), Article 4. https://fisherpub.sjf.edu/soaring/vol2024/iss2/4">
+                        Copy Citation
+                    </button>
+                </div>
+            </div>
+
+            <div class="publication-card" data-year="2024"
+                data-text="food insecurity factors undergraduate students byrd soaring fisher high us">
+                <div class="pub-card-meta">
+                    <span class="pub-year-badge">2024</span>
+                    <span class="pub-topic-tag">Food Insecurity</span>
+                    <span class="pub-topic-tag">Undergraduate</span>
+                </div>
+                <h3 class="pub-title">
+                    <a href="https://fisherpub.sjf.edu/soaring/vol2024/iss1/2" target="_blank">
+                        The factors causing high food insecurity in U.S. undergraduate students
+                    </a>
+                </h3>
+                <p class="pub-authors">Byrd, N.S.</p>
+                <p class="pub-journal"><em>Soaring: A Journal of Undergraduate Research, 2024</em>(1), Article 2.</p>
+                <div class="pub-actions">
+                    <a href="https://fisherpub.sjf.edu/soaring/vol2024/iss1/2" target="_blank" class="pub-badge">View Article</a>
+                    <button class="pub-badge pub-copy-citation"
+                        data-citation="Byrd, N. S. (2024). The factors causing high food insecurity in U.S. undergraduate students. Soaring: A Journal of Undergraduate Research, 2024(1), Article 2. https://fisherpub.sjf.edu/soaring/vol2024/iss1/2">
+                        Copy Citation
+                    </button>
+                </div>
+            </div>
+
         </div>
-        
-        <div class="publication-item">
-            <p>3. Byrd, N.S. (2024). Loneliness in the nucleus for psychopathology: Relationships with cognitive, social, and personality disorders. <em>Soaring: A Journal of Undergraduate Research, 2024</em>(2), Article 4. <a href="https://fisherpub.sjf.edu/soaring/vol2024/iss2/4" target="_blank">https://fisherpub.sjf.edu/soaring/vol2024/iss2/4</a></p>
-        </div>
-        
-        <div class="publication-item">
-            <p>4. Byrd, N.S. (2024). The factors causing high food insecurity in U.S. undergraduate students. <em>Soaring: A Journal of Undergraduate Research, 2024</em>(1), Article 2. <a href="https://fisherpub.sjf.edu/soaring/vol2024/iss1/2" target="_blank">https://fisherpub.sjf.edu/soaring/vol2024/iss1/2</a></p>
-        </div>
+        <p class="pub-no-results" id="pubNoResults">No publications match your search.</p>
+
     </div>
 
     <footer class="footer">
         <p>&copy; <span id="copyright-year"></span> Natalie S. Byrd</p>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 19V5M5 12l7-7 7 7"/>
