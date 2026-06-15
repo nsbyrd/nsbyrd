@@ -1,3 +1,7 @@
+// Set copyright year
+const yearEl = document.getElementById('copyright-year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 // Mobile navigation toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');

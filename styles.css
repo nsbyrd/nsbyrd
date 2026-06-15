@@ -8,7 +8,7 @@
 :root {
     --primary-color: #333;
     --secondary-color: #666;
-    --link-color: #0066cc;
+    --link-color: #1E407C;
     --border-color: #ddd;
     --background-light: #f9f9f9;
 }
@@ -481,7 +481,7 @@ hr.thin {
     gap: 1.5rem;
     margin-bottom: 2rem;
     padding: 2rem;
-    background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+    background: linear-gradient(135deg, #1E407C 0%, #4a7abf 100%);
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
