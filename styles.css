@@ -656,8 +656,9 @@ hr.thin {
 
 /* Publication Stats */
 .pub-stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-bottom: 2rem;
     padding: 2rem;
