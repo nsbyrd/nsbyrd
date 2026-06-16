@@ -59,10 +59,8 @@ fetch('assets/scholar-stats.json')
     .then(data => {
         const pubEl  = document.getElementById('stat-publications');
         const citEl  = document.getElementById('stat-citations');
-        const updEl  = document.getElementById('stat-updated');
-        if (pubEl) pubEl.textContent  = data.publications ?? '—';
-        if (citEl) citEl.textContent  = data.citations    ?? '—';
-        if (updEl && data.updated) updEl.textContent = `Last updated ${data.updated}`;
+        if (pubEl) pubEl.textContent = data.publications ?? '—';
+        if (citEl) citEl.textContent = data.citations    ?? '—';
     })
     .catch(() => {
         const pubEl = document.getElementById('stat-publications');
