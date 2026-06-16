@@ -53,6 +53,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Copy email button
+const copyEmailBtn = document.getElementById('copyEmail');
+if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText('nsb5522@psu.edu').then(() => {
+            copyEmailBtn.textContent = 'Copied!';
+            copyEmailBtn.classList.add('copied');
+            setTimeout(() => {
+                copyEmailBtn.textContent = 'Copy';
+                copyEmailBtn.classList.remove('copied');
+            }, 2000);
+        });
+    });
+}
+
 // Load scholar stats from assets/scholar-stats.json
 fetch('assets/scholar-stats.json')
     .then(r => r.json())

@@ -235,6 +235,29 @@ hr.thin {
     margin-bottom: 0.5rem;
 }
 
+.copy-email-btn {
+    font-size: 0.72rem;
+    color: var(--secondary-color);
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+    vertical-align: middle;
+}
+
+.copy-email-btn:hover {
+    border-color: var(--link-color);
+    color: var(--link-color);
+}
+
+.copy-email-btn.copied {
+    border-color: #22c55e;
+    color: #22c55e;
+}
+
 .social-links {
     display: flex;
     flex-direction: column;
