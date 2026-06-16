@@ -53,6 +53,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Relative time for news dates
+function relativeTime(dateStr) {
+    const diff = Math.floor((Date.now() - new Date(dateStr)) / 86400000);
+    if (diff === 0) return 'Today';
+    if (diff === 1) return 'Yesterday';
+    if (diff < 7)  return `${diff} days ago`;
+    if (diff < 14) return '1 week ago';
+    if (diff < 30) return `${Math.floor(diff / 7)} weeks ago`;
+    if (diff < 60) return '1 month ago';
+    if (diff < 365) return `${Math.floor(diff / 30)} months ago`;
+    if (diff < 730) return '1 year ago';
+    return `${Math.floor(diff / 365)} years ago`;
+}
+
+document.querySelectorAll('.news-date[data-date]').forEach(el => {
+    el.textContent = relativeTime(el.dataset.date);
+});
+
+// Animated count-up for publication stats
+function countUp(el, target, duration) {
+    const start = performance.now();
+    const update = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        el.textContent = Math.floor(progress * target);
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target;
+    };
+    requestAnimationFrame(update);
+}
+
+const pubStatEl  = document.getElementById('stat-publications');
+const citStatEl  = document.getElementById('stat-citations');
+
+if (pubStatEl && citStatEl) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                countUp(pubStatEl, parseInt(pubStatEl.dataset.target || pubStatEl.textContent) || 0, 800);
+                countUp(citStatEl, parseInt(citStatEl.dataset.target || citStatEl.textContent) || 0, 800);
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.5 });
+    observer.observe(pubStatEl.closest('.pub-stats-container') || pubStatEl);
+}
+
 // Copy email button
 const copyEmailBtn = document.getElementById('copyEmail');
 if (copyEmailBtn) {
@@ -74,8 +120,8 @@ fetch('assets/scholar-stats.json')
     .then(data => {
         const pubEl  = document.getElementById('stat-publications');
         const citEl  = document.getElementById('stat-citations');
-        if (pubEl) pubEl.textContent = data.publications ?? '—';
-        if (citEl) citEl.textContent = data.citations    ?? '—';
+        if (pubEl) { pubEl.dataset.target = data.publications ?? 0; pubEl.textContent = data.publications ?? '—'; }
+        if (citEl) { citEl.dataset.target = data.citations    ?? 0; citEl.textContent = data.citations    ?? '—'; }
     })
     .catch(() => {
         const pubEl = document.getElementById('stat-publications');
