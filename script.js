@@ -83,22 +83,6 @@ function countUp(el, target, duration) {
     requestAnimationFrame(update);
 }
 
-const pubStatEl  = document.getElementById('stat-publications');
-const citStatEl  = document.getElementById('stat-citations');
-
-if (pubStatEl && citStatEl) {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                countUp(pubStatEl, parseInt(pubStatEl.dataset.target || pubStatEl.textContent) || 0, 800);
-                countUp(citStatEl, parseInt(citStatEl.dataset.target || citStatEl.textContent) || 0, 800);
-                observer.disconnect();
-            }
-        });
-    }, { threshold: 0.5 });
-    observer.observe(pubStatEl.closest('.pub-stats-container') || pubStatEl);
-}
-
 // Copy email button
 const copyEmailBtn = document.getElementById('copyEmail');
 if (copyEmailBtn) {
@@ -120,14 +104,14 @@ fetch('assets/scholar-stats.json')
     .then(data => {
         const pubEl  = document.getElementById('stat-publications');
         const citEl  = document.getElementById('stat-citations');
-        if (pubEl) { pubEl.dataset.target = data.publications ?? 0; pubEl.textContent = data.publications ?? '—'; }
-        if (citEl) { citEl.dataset.target = data.citations    ?? 0; citEl.textContent = data.citations    ?? '—'; }
+        if (pubEl) countUp(pubEl, data.publications ?? 0, 800);
+        if (citEl) countUp(citEl, data.citations    ?? 0, 800);
     })
     .catch(() => {
         const pubEl = document.getElementById('stat-publications');
         const citEl = document.getElementById('stat-citations');
-        if (pubEl) pubEl.textContent = '4';
-        if (citEl) citEl.textContent = '1';
+        if (pubEl) countUp(pubEl, 4, 800);
+        if (citEl) countUp(citEl, 1, 800);
     });
 
 // Copy citation buttons
