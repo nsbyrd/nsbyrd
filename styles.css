@@ -666,12 +666,9 @@ hr.thin {
 
 .pub-award {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
     color: #92610a;
-    background: #fef3c7;
-    border: 1px solid #f6d775;
-    border-radius: 4px;
-    padding: 0.2rem 0.55rem;
     margin-top: 0.4rem;
     margin-bottom: 0.25rem;
 }
