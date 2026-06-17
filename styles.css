@@ -664,6 +664,31 @@ hr.thin {
     color: #22c55e;
 }
 
+.pub-award {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #92610a;
+    background: #fef3c7;
+    border: 1px solid #f6d775;
+    border-radius: 4px;
+    padding: 0.2rem 0.55rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.pub-abstract {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    line-height: 1.65;
+}
+
+.pub-toggle-abstract.pub-badge {
+    margin-left: 0;
+}
+
 /* Publication Stats */
 .pub-stats-container {
     display: flex;

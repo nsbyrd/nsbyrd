@@ -114,6 +114,17 @@ fetch('assets/scholar-stats.json')
         if (citEl) countUp(citEl, 1, 800);
     });
 
+// Abstract toggle buttons
+document.querySelectorAll('.pub-toggle-abstract').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const abstract = btn.closest('.publication-card').querySelector('.pub-abstract');
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        abstract.hidden = expanded;
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.textContent = expanded ? 'Show abstract' : 'Hide abstract';
+    });
+});
+
 // Copy citation buttons
 document.querySelectorAll('.pub-copy-citation').forEach(btn => {
     btn.addEventListener('click', () => {
