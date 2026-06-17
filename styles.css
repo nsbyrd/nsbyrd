@@ -611,6 +611,7 @@ hr.thin {
 .pub-title {
     font-size: 1.05rem;
     font-weight: 600;
+    margin-top: 0;
     margin-bottom: 0.4rem;
     line-height: 1.4;
 }
