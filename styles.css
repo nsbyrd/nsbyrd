@@ -147,13 +147,15 @@ hr.thin {
 }
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 8px solid white;
     object-fit: cover;
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .header-overlay h1 {
