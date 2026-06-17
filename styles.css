@@ -154,6 +154,7 @@ hr.thin {
     border-radius: 50%;
     border: 8px solid white;
     object-fit: cover;
+    object-position: center 15%;
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
