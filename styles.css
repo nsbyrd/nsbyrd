@@ -633,7 +633,7 @@ hr.thin {
 .pub-journal {
     font-size: 0.9rem;
     color: var(--secondary-color);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.35rem;
 }
 
 .pub-actions {
@@ -641,7 +641,7 @@ hr.thin {
     gap: 0.5rem;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 0.75rem;
+    margin-top: 0.35rem;
 }
 
 .pub-badge {
