@@ -110,7 +110,7 @@ fetch('assets/scholar-stats.json')
     .catch(() => {
         const pubEl = document.getElementById('stat-publications');
         const citEl = document.getElementById('stat-citations');
-        if (pubEl) countUp(pubEl, 4, 800);
+        if (pubEl) countUp(pubEl, 5, 800);
         if (citEl) countUp(citEl, 1, 800);
     });
 
