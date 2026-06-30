@@ -1,6 +1,6 @@
 {
   "publications": 5,
   "citations": 1,
-  "updated": "2026-06-29",
-  "fetch_error": "'NoneType' object has no attribute 'get'"
+  "updated": "2026-06-30",
+  "fetch_error": "Cannot Fetch from Google Scholar."
 }
