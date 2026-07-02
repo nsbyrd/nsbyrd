@@ -322,7 +322,6 @@ hr.thin {
     padding: 0.75rem 1rem;
     background-color: var(--background-light);
     border-radius: 6px;
-    border-left: 3px solid var(--heading-accent);
 }
 
 .news-date {
