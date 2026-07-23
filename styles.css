@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -680,8 +684,33 @@ hr.thin {
     line-height: 1.65;
 }
 
-.pub-toggle-abstract.pub-badge {
-    margin-left: 0;
+/* Abstract disclosure element */
+details.pub-abstract-details {
+    margin-top: 0.35rem;
+}
+
+details.pub-abstract-details > summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: var(--link-color);
+    display: inline;
+}
+
+details.pub-abstract-details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details.pub-abstract-details > summary:hover {
+    text-decoration: underline;
+}
+
+details.pub-abstract-details > summary::before {
+    content: 'Show abstract';
+}
+
+details.pub-abstract-details[open] > summary::before {
+    content: 'Hide abstract';
 }
 
 /* Publication Stats */
