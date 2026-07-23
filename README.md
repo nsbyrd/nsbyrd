@@ -1,6 +1,6 @@
 ## Hi there 👋
 
 <!--
-- 🔭 I’m currently a PhD Student at Penn State
-- 😄 Pronouns: she/her
+- I’m currently a PhD Student at Penn State
+- This is my professional website
 -->
