@@ -666,6 +666,26 @@ hr.thin {
     color: #22c55e;
 }
 
+.pub-brief-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--link-color);
+    border: 1px solid var(--link-color);
+    border-radius: 4px;
+    padding: 0.15rem 0.55rem;
+    text-decoration: none;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.pub-brief-link:hover {
+    background-color: var(--link-color);
+    color: #fff;
+    text-decoration: none;
+}
+
 .pub-award {
     display: inline-block;
     font-size: 0.85rem;
