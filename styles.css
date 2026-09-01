@@ -741,7 +741,7 @@ details.pub-abstract-details[open] > summary::before {
     gap: 1.5rem;
     margin-bottom: 2rem;
     padding: 2rem;
-    background: linear-gradient(135deg, #1E407C 0%, #4a7abf 100%);
+    background: #1E407C;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
