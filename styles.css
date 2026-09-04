@@ -922,3 +922,112 @@ details.pub-abstract-details[open] > summary::before {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
+/* ===== Peer-reviewed publications: two-column rows (2c) ===== */
+
+.publication-card {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0 0 1.5rem;
+    margin: 0 0 1.5rem;
+    border-bottom: 1px solid #ececec;
+}
+
+#publications-list .publication-card:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.pub-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.pub-main {
+    min-width: 0;
+}
+
+.pub-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: baseline;
+    margin-top: 0.5rem;
+}
+
+.pub-actions .pub-badge {
+    flex: none;
+}
+
+.pub-abstract[hidden] {
+    display: none;
+}
+
+.pub-abstract {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    line-height: 1.65;
+}
+
+.pub-abstract p {
+    margin: 0;
+}
+
+.pub-products {
+    background-color: var(--background-light);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+}
+
+.pub-products-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--secondary-color);
+    margin-bottom: 0.6rem;
+}
+
+.pub-products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.pub-product {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--link-color);
+    background-color: #fff;
+    border: 1px solid #d4dae4;
+    border-radius: 999px;
+    padding: 0.18rem 0.65rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: border-color 0.15s;
+}
+
+.pub-product:hover {
+    border-color: var(--link-color);
+    text-decoration: none;
+}
+
+.pub-products-empty {
+    margin: 0;
+    font-size: 0.875rem;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .pub-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}

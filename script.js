@@ -31,6 +31,19 @@ if (backToTopButton) {
     });
 }
 
+// Show / hide abstract
+document.querySelectorAll('.pub-abstract-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.closest('.publication-card');
+        const box = card && card.querySelector('.pub-abstract');
+        if (!box) return;
+        const willOpen = box.hasAttribute('hidden');
+        box.toggleAttribute('hidden', !willOpen);
+        btn.textContent = willOpen ? 'Hide abstract' : 'Show abstract';
+        btn.setAttribute('aria-expanded', String(willOpen));
+    });
+});
+
 // Copy citation buttons
 document.querySelectorAll('.pub-copy-citation').forEach(btn => {
     btn.addEventListener('click', () => {
