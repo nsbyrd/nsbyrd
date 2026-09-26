@@ -19,15 +19,10 @@ if (navToggle && navMenu) {
 }
 
 // Back to Top Button
-const backToTopButton = document.getElementById('backToTop');
-
-if (backToTopButton) {
+const nsbTop = document.getElementById('nsb-top');
+if (nsbTop) {
     window.addEventListener('scroll', () => {
-        backToTopButton.classList.toggle('visible', window.pageYOffset > 300);
-    });
-
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        nsbTop.classList.toggle('show', window.pageYOffset > 600);
     });
 }
 
