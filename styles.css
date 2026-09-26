@@ -87,6 +87,7 @@ hr.thin {
     color: var(--primary-color);
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .nav-brand:hover {
@@ -96,6 +97,7 @@ hr.thin {
 .nav-logo {
     height: 44px;
     width: auto;
+    flex-shrink: 0;
     display: block;
 }
 
