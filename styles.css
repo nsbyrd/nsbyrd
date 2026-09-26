@@ -56,6 +56,9 @@ hr {
 }
 
 hr.thin {
+    background: none;
+    height: auto;
+    border: 0;
     border-top: 1px solid var(--border-color);
     margin: 1rem 0;
 }
@@ -82,10 +85,18 @@ hr.thin {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
 }
 
 .nav-brand:hover {
     text-decoration: none;
+}
+
+.nav-logo {
+    max-height: 44px;
+    width: auto;
+    display: block;
 }
 
 .nav-menu {
@@ -155,14 +166,25 @@ hr.thin {
     padding: 2rem;
 }
 
+/* Gemstone headshot */
+.gem {
+    display: inline-block;
+    padding: 4px;
+    background: #8A8074;
+    clip-path: polygon(40px 0, calc(100% - 40px) 0, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0 calc(100% - 40px), 0 40px);
+    margin-bottom: 1.5rem;
+}
+.gem p, .gem figure { margin: 0; }
+.gem img {
+    display: block;
+    clip-path: polygon(38px 0, calc(100% - 38px) 0, 100% 38px, 100% calc(100% - 38px), calc(100% - 38px) 100%, 38px 100%, 0 calc(100% - 38px), 0 38px);
+}
+
 .profile-photo {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
-    border: 8px solid white;
     object-fit: cover;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: block;
     transform: translateZ(0);
     will-change: transform;
 }
@@ -434,7 +456,6 @@ hr.thin {
     .profile-photo {
         width: 150px;
         height: 150px;
-        border: 6px solid white;
     }
 
     .header-overlay h1 {
