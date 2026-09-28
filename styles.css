@@ -1118,3 +1118,33 @@ details.pub-abstract-details[open] > summary::before {
         gap: 16px;
     }
 }
+
+/* NSB publication counter: paste at the END of styles.css */
+.pub-stats-container {
+  background: #001E44;
+  border-radius: 0;
+  box-shadow: none;
+  gap: 0;
+  padding: 2.25rem 2rem;
+  clip-path: polygon(18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px), 0 18px);
+  outline: 1px solid rgba(150, 190, 230, .45);
+  outline-offset: -10px;
+}
+.pub-stat-card { padding: .5rem 3rem; }
+.pub-stat-card + .pub-stat-card {
+  position: relative;
+  border-left: 1px solid rgba(150, 190, 230, .35);
+}
+.pub-stat-card + .pub-stat-card::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  background: #001E44;
+  border: 1px solid rgba(150, 190, 230, .7);
+  transform: rotate(45deg);
+}
+
