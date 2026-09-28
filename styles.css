@@ -1148,3 +1148,6 @@ details.pub-abstract-details[open] > summary::before {
   transform: rotate(45deg);
 }
 
+
+.pub-products-label { text-transform: none; letter-spacing: normal; font-size: 0.8125rem; text-align: center; }
+.pub-products-list { justify-content: center; }
