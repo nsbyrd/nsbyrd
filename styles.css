@@ -1268,3 +1268,16 @@ details.pub-abstract-details[open] > summary::before {
 .header .hero-buttons { justify-content: center; }
 .hero-rays { width: 90px; height: 30px; margin-top: .6rem; background-size: 90px 30px; }
 .hero-rays + .hero-buttons { margin-top: .35rem; }
+
+/* CV page: sunburst between the CV and Resume columns */
+.cv-docs { grid-template-columns: 1fr auto 1fr; gap: 1.25rem; }
+.cv-rays {
+  width: 90px;
+  height: 30px;
+  margin-top: .25rem;
+  background: url("assets/nsb-sunburst.svg") no-repeat center / 90px 30px;
+}
+@media (max-width: 800px) {
+  .cv-docs { grid-template-columns: 1fr; }
+  .cv-rays { justify-self: center; margin: 0; }
+}
