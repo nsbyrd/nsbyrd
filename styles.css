@@ -1262,3 +1262,9 @@ details.pub-abstract-details[open] > summary::before {
 
 /* CV page: center heading and button in each column */
 .cv-doc { align-items: center; }
+
+/* Home: equal-width header buttons so the rays sit over the gap */
+.header .hero-btn { min-width: 11.5rem; justify-content: center; }
+.header .hero-buttons { justify-content: center; }
+.hero-rays { width: 90px; height: 30px; margin-top: .6rem; background-size: 90px 30px; }
+.hero-rays + .hero-buttons { margin-top: .35rem; }
