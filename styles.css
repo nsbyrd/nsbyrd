@@ -1281,3 +1281,11 @@ details.pub-abstract-details[open] > summary::before {
   .cv-docs { grid-template-columns: 1fr; }
   .cv-rays { justify-self: center; margin: 0; }
 }
+
+/* CV page: rays float between columns without taking width */
+.cv-docs { grid-template-columns: 1fr 1fr; gap: 2rem; position: relative; }
+.cv-rays { position: absolute; top: -.35rem; left: 50%; transform: translateX(-50%); margin: 0; }
+@media (max-width: 800px) {
+  .cv-docs { grid-template-columns: 1fr; }
+  .cv-rays { position: static; transform: none; justify-self: center; }
+}
