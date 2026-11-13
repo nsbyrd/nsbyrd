@@ -1243,3 +1243,22 @@ details.pub-abstract-details[open] > summary::before {
 .research-line h4 { margin: 0 0 .75rem; color: #001E44; text-align: center; }
 .research-line p { margin: 0; line-height: 1.6; }
 @media (max-width: 700px) { .research-lines { grid-template-columns: 1fr; gap: 2rem; } }
+/* Centered headings and notes */
+.research-intro > h2 { margin-top: 0; }
+.scholar-note,
+.section-title,
+.news-section > h2,
+.affiliations-section > h2 { text-align: center; }
+
+/* Home: sunburst above the header buttons */
+.hero-rays {
+  width: 120px;
+  height: 40px;
+  margin: 1.25rem auto 0;
+  background: url("assets/nsb-sunburst.svg") no-repeat;
+  filter: brightness(0) invert(1);
+}
+.hero-rays + .hero-buttons { margin-top: .5rem; }
+
+/* CV page: center heading and button in each column */
+.cv-doc { align-items: center; }
