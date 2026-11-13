@@ -1289,3 +1289,6 @@ details.pub-abstract-details[open] > summary::before {
   .cv-docs { grid-template-columns: 1fr; }
   .cv-rays { position: static; transform: none; justify-self: center; }
 }
+
+/* CV page: wider document area */
+.content-section.cv-section { max-width: 1500px; }
