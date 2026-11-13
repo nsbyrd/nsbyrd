@@ -1151,3 +1151,95 @@ details.pub-abstract-details[open] > summary::before {
 
 .pub-products-label { text-transform: none; letter-spacing: normal; font-size: 0.8125rem; text-align: center; }
 .pub-products-list { justify-content: center; }
+
+/* Home: View CV / About my research buttons */
+.hero-buttons { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 1.4rem;
+  border: 1px solid #001E44;
+  color: #001E44;
+  text-decoration: none;
+  font-weight: 600;
+}
+.hero-btn.primary { background: #001E44; color: #FFFFFF; }
+.hero-btn:hover { background: #1E407C; border-color: #1E407C; color: #FFFFFF; }
+
+/* Home: center the Hello! and Contact headings */
+.intro-section h2,
+.contact-section h2 { text-align: center; }
+
+/* Research: one-sentence plain-language finding */
+.pub-finding { margin: .4rem 0 .6rem; color: #001E44; line-height: 1.5; }
+
+/* CV page: CV and resume side by side */
+.cv-docs { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.cv-doc { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+.cv-doc h2 { margin: 0; }
+.cv-doc iframe { width: 100%; height: 820px; border: 1px solid #E5E5E5; }
+@media (max-width: 800px) {
+  .cv-docs { grid-template-columns: 1fr; }
+  .cv-doc iframe { height: 520px; }
+}
+
+/* Home: let the header grow to fit the buttons */
+.header { height: auto; }
+.header-overlay { min-height: 400px; }
+@media (max-width: 768px) { .header-overlay { min-height: 350px; } }
+@media (max-width: 480px) { .header-overlay { min-height: 300px; } }
+.header .hero-btn:not(.primary) { border-color: #FFFFFF; color: #FFFFFF; }
+
+/* Home: both header buttons transparent */
+.header .hero-btn,
+.header .hero-btn.primary { background: transparent; border-color: #FFFFFF; color: #FFFFFF; }
+.header .hero-btn:hover { background: #FFFFFF; border-color: #FFFFFF; color: #001E44; }
+
+/* Research: overview and lines of research */
+.research-intro { margin-bottom: 2.5rem; }
+.research-intro > h2 { text-align: center; }
+.research-overview { max-width: 46rem; margin: 0 auto 2.5rem; text-align: center; line-height: 1.75; }
+.research-lines-title { text-align: center; margin: 0 0 1.5rem; }
+.research-lines-title::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 40px;
+  margin: 0 auto 10px;
+  background: url("assets/nsb-sunburst.svg") no-repeat;
+}
+.research-lines { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.research-line {
+  position: relative;
+  text-align: center;
+  padding: 2.25rem 1.75rem 1.75rem;
+  border: 1px solid #DCD5CA;
+  background: #FFFFFF;
+}
+.research-line-num {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  font-weight: 600;
+  color: #001E44;
+}
+.research-line-num::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #FFFFFF;
+  border: 1px solid #8A8074;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.research-line h4 { margin: 0 0 .75rem; color: #001E44; text-align: center; }
+.research-line p { margin: 0; line-height: 1.6; }
+@media (max-width: 700px) { .research-lines { grid-template-columns: 1fr; gap: 2rem; } }
