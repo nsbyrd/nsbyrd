@@ -1373,3 +1373,4 @@ details.pub-abstract-details[open] > summary::before {
 .work-applied-text p { margin: 0 0 1rem; }
 
 .btn-arrow { margin-left: .4rem; }
+.gem + .hero-rays { margin: 0 auto .4rem; }
