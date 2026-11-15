@@ -1386,3 +1386,28 @@ details.pub-abstract-details[open] > summary::before {
 }
 .contact-row span:nth-of-type(1).contact-icon { flex-grow: 0; }
 .contact-row .contact-icon + span { flex-grow: 1; }
+
+/* Research: counter boxes match the Lines of research boxes */
+.pub-stats-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 0;
+  background: none;
+  clip-path: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+.pub-stat-card,
+.pub-stat-card + .pub-stat-card {
+  padding: 1.75rem 1.5rem;
+  border: 1px solid #DCD5CA;
+  background: #FFFFFF;
+  color: var(--primary-color);
+}
+.pub-stat-card + .pub-stat-card::before { content: none; }
+.stat-number { color: #001E44; text-shadow: none; }
+.stat-label { color: var(--secondary-color); }
+.pub-stats-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 480px) { .pub-stat-card, .pub-stat-card + .pub-stat-card { padding: 1.25rem .75rem; } .stat-label { letter-spacing: .5px; font-size: .8rem; } }
