@@ -1432,3 +1432,57 @@ details.pub-abstract-details[open] > summary::before {
 /* Research impact: labels match the Lines of research box headings */
 .pub-stats-container { margin-top: 0; }
 .stat-label { font-size: 1rem; font-weight: 700; color: #001E44; text-transform: none; letter-spacing: normal; opacity: 1; }
+
+/* Update 3 */
+
+/* Year timeline */
+.nsb-year-group { display: grid; grid-template-columns: 110px 28px 1fr; margin-top: .5rem; }
+.nsb-year { text-align: right; padding: .6rem .9rem 0 0; font-size: 1.375rem; font-weight: 700; color: #1E407C; line-height: 1; }
+.nsb-rail { position: relative; }
+.nsb-rail::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #DDD5CA; }
+.nsb-rail::after {
+  content: ""; position: absolute; top: 12px; left: 50%;
+  width: 10px; height: 10px; margin-left: -6px;
+  background: #FFFFFF; border: 1px solid #8A8074; transform: rotate(45deg);
+}
+.nsb-entries { padding: 0 0 1rem 1.25rem; min-width: 0; }
+.nsb-entry { padding: .65rem 0; border-bottom: 1px solid #F0ECE6; }
+.nsb-entry:last-child { border-bottom: none; }
+@media (max-width: 600px) {
+  .nsb-year-group { grid-template-columns: 56px 20px 1fr; }
+  .nsb-year { font-size: 1.05rem; padding-right: .5rem; }
+  .nsb-entries { padding-left: .75rem; }
+}
+
+/* Awards */
+.award-entry { font-size: .95rem; line-height: 1.6; }
+.award-desc { color: #666666; }
+
+/* Research: publication cards inside the timeline */
+.publication-card.nsb-entry { padding: 1rem 0; margin: 0; border-bottom: 1px solid #F0ECE6; }
+#publications-list .nsb-entries > .publication-card:last-child { border-bottom: none; }
+.pub-award-diamond {
+  display: inline-block; width: 8px; height: 8px; margin: 0 .55rem 0 .15rem; vertical-align: .1em;
+  border: 1px solid #8A8074; background: #FFFFFF; transform: rotate(45deg);
+}
+
+/* Research: presentations */
+.pres-entry { display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: start; }
+.pres-tag { margin-top: .2rem; padding: .1rem 0; text-align: center; border: 1px solid #DDD5CA; font-size: .78rem; font-weight: 600; color: #001E44; }
+.pres-tag.talk { border-color: #1E407C; }
+.pres-cite { font-size: .95rem; line-height: 1.6; }
+.pres-venue { color: #666666; }
+@media (max-width: 600px) { .pres-entry { grid-template-columns: 1fr; gap: .35rem; } .pres-tag { width: 64px; } }
+
+/* CV page: boxed documents with a blank tab, sunburst centered between */
+.cv-box { position: relative; border: 1px solid #DDD5CA; background: #FFFFFF; padding: 2.75rem 1.75rem 1.75rem; display: flex; flex-direction: column; align-items: center; gap: .9rem; text-align: center; }
+.cv-box h2 { margin: 0; color: #001E44; }
+.cv-subtitle { margin: 0; color: #666666; }
+.cv-box iframe { width: 100%; }
+.cv-more { text-align: center; color: #666666; margin-top: 1.75rem; }
+.cv-docs { grid-template-columns: minmax(0, 1fr) 90px minmax(0, 1fr); gap: 1rem; margin-top: 1rem; }
+.cv-rays { position: static; transform: none; align-self: center; justify-self: center; margin: 0; }
+@media (max-width: 800px) {
+  .cv-docs { grid-template-columns: 1fr; gap: 1.75rem; }
+  .cv-rays { justify-self: center; }
+}
