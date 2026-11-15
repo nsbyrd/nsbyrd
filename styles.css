@@ -1371,3 +1371,5 @@ details.pub-abstract-details[open] > summary::before {
   .photo.wide, .photo.tall { grid-column: auto; grid-row: auto; }
 }
 .work-applied-text p { margin: 0 0 1rem; }
+
+.btn-arrow { margin-left: .4rem; }
