@@ -1428,3 +1428,7 @@ details.pub-abstract-details[open] > summary::before {
   border: 1px solid #8A8074;
   transform: rotate(45deg);
 }
+
+/* Research impact: labels match the Lines of research box headings */
+.pub-stats-container { margin-top: 0; }
+.stat-label { font-size: 1rem; font-weight: 700; color: #001E44; text-transform: none; letter-spacing: normal; opacity: 1; }
