@@ -1292,3 +1292,82 @@ details.pub-abstract-details[open] > summary::before {
 
 /* CV page: wider document area */
 .content-section.cv-section { max-width: 1500px; }
+
+/* Update 2 */
+
+/* Nav: Contact pill */
+.nav-link.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 1.25rem;
+  background: #001E44;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 999px;
+}
+.nav-link.nav-cta:hover { background: #1E407C; color: #FFFFFF; text-decoration: none; }
+.nav-menu { align-items: center; }
+@media (max-width: 768px) { .nav-menu { align-items: flex-start; } }
+#contact { scroll-margin-top: 90px; }
+
+/* Home: contact card */
+.contact-details { text-align: center; margin-top: 1.25rem; }
+.contact-details p { margin: 0 0 .15rem; }
+.contact-name { font-weight: 700; }
+.contact-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-top: 1.1rem; }
+.contact-btn { display: flex; align-items: center; justify-content: center; min-height: 44px; border: 1px solid #001E44; color: #001E44; font-weight: 600; }
+.contact-btn.primary { background: #001E44; color: #FFFFFF; }
+.contact-btn:hover { background: #1E407C; border-color: #1E407C; color: #FFFFFF; text-decoration: none; }
+.contact-rows { display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; }
+.contact-row { display: flex; align-items: center; gap: .6rem; padding: .55rem .75rem; background: #FFFFFF; border: 1px solid #E6E6E6; border-radius: 6px; color: #1E407C; }
+.contact-row:hover { border-color: #1E407C; text-decoration: none; }
+.contact-row img,
+.contact-row svg { width: 20px; height: 20px; flex-shrink: 0; }
+.contact-row span:nth-of-type(1) { flex-grow: 1; }
+.contact-arrow { color: #999999; }
+
+/* Home: Explore my work */
+.explore-section { max-width: 1200px; margin: 0 auto; padding: 2rem 2rem 0; }
+.explore-section > h2 { font-size: 2rem; margin-bottom: 0; color: var(--heading-accent); }
+.explore-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem; }
+.explore-card { display: flex; flex-direction: column; gap: .75rem; color: var(--primary-color); }
+.explore-card:hover { text-decoration: none; }
+.explore-card:hover h3 { text-decoration: underline; }
+.explore-card img { width: 100%; height: 380px; object-fit: cover; border-radius: 8px; display: block; }
+.explore-card h3 { margin: 0; font-size: 1.5rem; color: var(--heading-accent); }
+.explore-card p { margin: 0; }
+@media (max-width: 768px) {
+  .explore-grid { grid-template-columns: 1fr; }
+  .explore-card img { height: 240px; }
+}
+
+/* Lines of Research: numeral tab sits above the box border */
+.research-line-num { z-index: 1; isolation: isolate; }
+.research-lines-3 { grid-template-columns: repeat(3, 1fr); gap: 2.75rem 1.5rem; }
+@media (max-width: 900px) { .research-lines-3 { grid-template-columns: 1fr; } }
+
+/* Work page */
+.page-subtitle { margin: 0; color: var(--secondary-color); }
+.content-section.work-section { max-width: 1200px; }
+.work-applied { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+.work-applied-text h2 { margin-top: 0; }
+.work-buttons { max-width: 26rem; }
+.work-applied-photo { width: 100%; border-radius: 8px; display: block; }
+@media (max-width: 768px) { .work-applied { grid-template-columns: 1fr; } }
+
+/* In Photos albums */
+.photo-section { max-width: 1200px; margin: 0 auto; padding: 2.5rem 2rem 3rem; }
+.photo-section > h2 { font-size: 1.75rem; color: var(--heading-accent); }
+.photo-album { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: .9rem; margin-top: 1.5rem; }
+.photo { position: relative; margin: 0; }
+.photo.wide { grid-column: span 2; }
+.photo.tall { grid-row: span 2; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 8px; }
+.photo figcaption { position: absolute; left: .75rem; bottom: .65rem; padding: .25rem .75rem; background: #FFFFFF; border-radius: 999px; font-size: .85rem; font-weight: 500; color: var(--primary-color); }
+@media (max-width: 900px) { .photo-album { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .photo-album { grid-template-columns: 1fr; grid-auto-rows: 260px; }
+  .photo.wide, .photo.tall { grid-column: auto; grid-row: auto; }
+}
+.work-applied-text p { margin: 0 0 1rem; }
