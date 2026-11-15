@@ -57,3 +57,68 @@ document.querySelectorAll('.pub-copy-citation').forEach(btn => {
 
 // Footer year
 document.querySelectorAll('.footer-year').forEach(el => { el.textContent = new Date().getFullYear(); });
+
+// Photo album: click to enlarge
+(() => {
+    const photos = [...document.querySelectorAll('.photo-album .photo img')];
+    if (!photos.length) return;
+
+    const box = document.createElement('div');
+    box.className = 'lightbox';
+    box.hidden = true;
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'Enlarged photo');
+    box.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button>' +
+        '<button class="lightbox-nav lightbox-prev" aria-label="Previous photo">&#8592;</button>' +
+        '<figure class="lightbox-figure"><img alt=""><figcaption></figcaption></figure>' +
+        '<button class="lightbox-nav lightbox-next" aria-label="Next photo">&#8594;</button>';
+    document.body.appendChild(box);
+
+    const img = box.querySelector('img');
+    const cap = box.querySelector('figcaption');
+    let index = 0, lastFocus = null;
+
+    const show = (i) => {
+        index = (i + photos.length) % photos.length;
+        const src = photos[index];
+        img.src = src.currentSrc || src.src;
+        img.alt = src.alt;
+        const fc = src.closest('figure').querySelector('figcaption');
+        cap.textContent = fc ? fc.textContent : '';
+    };
+    const open = (i) => {
+        lastFocus = document.activeElement;
+        show(i);
+        box.hidden = false;
+        document.body.style.overflow = 'hidden';
+        box.querySelector('.lightbox-close').focus();
+    };
+    const close = () => {
+        box.hidden = true;
+        document.body.style.overflow = '';
+        if (lastFocus) lastFocus.focus();
+    };
+
+    photos.forEach((p, i) => {
+        p.tabIndex = 0;
+        p.setAttribute('role', 'button');
+        p.setAttribute('aria-label', 'Enlarge photo: ' + p.alt);
+        p.addEventListener('click', () => open(i));
+        p.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+        });
+    });
+
+    box.addEventListener('click', (e) => {
+        if (e.target.closest('.lightbox-prev')) show(index - 1);
+        else if (e.target.closest('.lightbox-next')) show(index + 1);
+        else if (!e.target.closest('.lightbox-figure img')) close();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (box.hidden) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') show(index - 1);
+        else if (e.key === 'ArrowRight') show(index + 1);
+    });
+})();
