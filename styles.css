@@ -1486,3 +1486,16 @@ details.pub-abstract-details[open] > summary::before {
   .cv-docs { grid-template-columns: 1fr; gap: 1.75rem; }
   .cv-rays { justify-self: center; }
 }
+
+/* Presentations: type label at the end instead of a tag */
+.pres-entry { display: block; }
+.pres-type { color: #1E407C; font-weight: 600; white-space: nowrap; }
+
+/* CV page: sunburst sits above the gap, boxes take full width */
+.cv-docs { grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.25rem; position: relative; }
+.cv-rays { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); }
+.cv-box { padding: 2.5rem .75rem .75rem; }
+@media (max-width: 800px) {
+  .cv-docs { grid-template-columns: 1fr; gap: 1.75rem; margin-top: 1.5rem; }
+  .cv-rays { position: static; transform: none; justify-self: center; }
+}
