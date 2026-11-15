@@ -1411,3 +1411,20 @@ details.pub-abstract-details[open] > summary::before {
 .stat-label { color: var(--secondary-color); }
 .pub-stats-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 480px) { .pub-stat-card, .pub-stat-card + .pub-stat-card { padding: 1.25rem .75rem; } .stat-label { letter-spacing: .5px; font-size: .8rem; } }
+
+/* Counter boxes: diamond tab on top, like the Lines of research boxes */
+.pub-stats-container { margin-top: 1.25rem; }
+.pub-stat-card,
+.pub-stat-card + .pub-stat-card { position: relative; padding-top: 2.25rem; }
+.pub-stat-card::after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -11px;
+  background: #FFFFFF;
+  border: 1px solid #8A8074;
+  transform: rotate(45deg);
+}
