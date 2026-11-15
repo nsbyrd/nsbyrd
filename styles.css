@@ -20,7 +20,6 @@ html {
     --heading-accent: #1E407C;
 }
 
-
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
@@ -53,14 +52,6 @@ hr {
         url("assets/nsb-diamond.svg") center / 16px no-repeat,
         linear-gradient(#DCD5CA, #DCD5CA) left center / calc(50% - 22px) 1px no-repeat,
         linear-gradient(#DCD5CA, #DCD5CA) right center / calc(50% - 22px) 1px no-repeat;
-}
-
-hr.thin {
-    background: none;
-    height: auto;
-    border: 0;
-    border-top: 1px solid var(--border-color);
-    margin: 1rem 0;
 }
 
 /* Navigation */
@@ -264,64 +255,6 @@ hr.thin {
 
 .contact-section p {
     margin-bottom: 0.5rem;
-}
-
-.copy-email-btn {
-    font-size: 0.72rem;
-    color: var(--secondary-color);
-    background: none;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    padding: 0.1rem 0.4rem;
-    cursor: pointer;
-    font-family: inherit;
-    transition: all 0.2s;
-    vertical-align: middle;
-}
-
-.copy-email-btn:hover {
-    border-color: var(--link-color);
-    color: var(--link-color);
-}
-
-.copy-email-btn.copied {
-    border-color: #22c55e;
-    color: #22c55e;
-}
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.social-links a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--primary-color);
-    transition: color 0.2s;
-}
-
-.social-links a:hover {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
-.social-links svg {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-}
-
-.social-links .social-icon-img {
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
-    max-height: 20px;
-    object-fit: contain;
-    flex-shrink: 0;
-    display: block;
 }
 
 /* Recent News Section */
@@ -548,55 +481,6 @@ hr.thin {
     margin-bottom: 0.75rem;
 }
 
-/* Publication Filter */
-.pub-filter {
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.pub-filter-search {
-    width: 100%;
-    padding: 0.6rem 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    font-size: 0.95rem;
-    background-color: var(--background-page);
-    color: var(--primary-color);
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-.pub-filter-search:focus {
-    border-color: var(--link-color);
-}
-
-.pub-filter-years {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 0.35rem 0.9rem;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    background: var(--background-page);
-    color: var(--secondary-color);
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-family: inherit;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-    background-color: var(--heading-accent);
-    color: #fff;
-    border-color: var(--heading-accent);
-}
-
 .pub-no-results {
     text-align: center;
     color: var(--secondary-color);
@@ -610,31 +494,6 @@ hr.thin {
     padding: 0.75rem 1rem;
     background-color: var(--background-light);
     border-radius: 8px;
-}
-
-.pub-card-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
-    flex-wrap: wrap;
-}
-
-.pub-year-badge {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: white;
-    background-color: var(--heading-accent);
-    padding: 0.2rem 0.6rem;
-    border-radius: 12px;
-}
-
-.pub-topic-tag {
-    font-size: 0.78rem;
-    color: var(--secondary-color);
-    border: 1px solid var(--border-color);
-    padding: 0.15rem 0.5rem;
-    border-radius: 10px;
 }
 
 .publication-card .pub-title {
@@ -694,26 +553,6 @@ hr.thin {
     color: #22c55e;
 }
 
-.pub-brief-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--link-color);
-    border: 1px solid var(--link-color);
-    border-radius: 4px;
-    padding: 0.15rem 0.55rem;
-    text-decoration: none;
-    transition: background-color 0.15s, color 0.15s;
-}
-
-.pub-brief-link:hover {
-    background-color: var(--link-color);
-    color: #fff;
-    text-decoration: none;
-}
-
 .pub-award {
     display: inline-block;
     font-size: 0.85rem;
@@ -730,35 +569,6 @@ hr.thin {
     font-size: 0.9rem;
     color: var(--secondary-color);
     line-height: 1.65;
-}
-
-/* Abstract disclosure element */
-details.pub-abstract-details {
-    margin-top: 0.35rem;
-}
-
-details.pub-abstract-details > summary {
-    list-style: none;
-    cursor: pointer;
-    font-size: 0.875rem;
-    color: var(--link-color);
-    display: inline;
-}
-
-details.pub-abstract-details > summary::-webkit-details-marker {
-    display: none;
-}
-
-details.pub-abstract-details > summary:hover {
-    text-decoration: underline;
-}
-
-details.pub-abstract-details > summary::before {
-    content: 'Show abstract';
-}
-
-details.pub-abstract-details[open] > summary::before {
-    content: 'Hide abstract';
 }
 
 /* Publication Stats */
@@ -792,35 +602,6 @@ details.pub-abstract-details[open] > summary::before {
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.95;
-}
-
-.stat-updated {
-    text-align: center;
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.7);
-    grid-column: 1 / -1;
-    padding-top: 0.25rem;
-}
-
-.publication-item {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.publication-item:last-child {
-    border-bottom: none;
-}
-
-.project-item {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: var(--background-light);
-    border-radius: 8px;
-}
-
-.project-item h3 {
-    margin-top: 0;
 }
 
 /* ===== Projects: horizontal rows ===== */
@@ -925,11 +706,6 @@ details.pub-abstract-details[open] > summary::before {
     .project-card h3 {
         font-size: 1.25rem;
     }
-}
-
-.project-author {
-    font-style: italic;
-    color: var(--secondary-color);
 }
 
 /* Text selection highlight */
@@ -1105,13 +881,6 @@ details.pub-abstract-details[open] > summary::before {
     text-decoration: none;
 }
 
-.pub-products-empty {
-    margin: 0;
-    font-size: 0.875rem;
-    font-style: italic;
-    color: var(--secondary-color);
-}
-
 @media (max-width: 768px) {
     .pub-grid {
         grid-template-columns: 1fr;
@@ -1148,12 +917,9 @@ details.pub-abstract-details[open] > summary::before {
   transform: rotate(45deg);
 }
 
-
 .pub-products-label { text-transform: none; letter-spacing: normal; font-size: 0.8125rem; text-align: center; }
 .pub-products-list { justify-content: center; }
 
-/* Home: View CV / About my research buttons */
-.hero-buttons { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
 .hero-btn {
   display: inline-flex;
   align-items: center;
@@ -1199,7 +965,7 @@ details.pub-abstract-details[open] > summary::before {
 /* Research: overview and lines of research */
 .research-intro { margin-bottom: 2.5rem; }
 .research-intro > h2 { text-align: center; }
-.research-overview { max-width: 46rem; margin: 0 auto 2.5rem; text-align: center; line-height: 1.75; }
+
 .research-lines-title { text-align: center; margin: 0 0 1.5rem; }
 .research-lines-title::before {
   content: "";
@@ -1258,16 +1024,14 @@ details.pub-abstract-details[open] > summary::before {
   background: url("assets/nsb-sunburst.svg") no-repeat;
   filter: brightness(0) invert(1);
 }
-.hero-rays + .hero-buttons { margin-top: .5rem; }
 
 /* CV page: center heading and button in each column */
 .cv-doc { align-items: center; }
 
 /* Home: equal-width header buttons so the rays sit over the gap */
 .header .hero-btn { min-width: 11.5rem; justify-content: center; }
-.header .hero-buttons { justify-content: center; }
+
 .hero-rays { width: 90px; height: 30px; margin-top: .6rem; background-size: 90px 30px; }
-.hero-rays + .hero-buttons { margin-top: .35rem; }
 
 /* CV page: sunburst between the CV and Resume columns */
 .cv-docs { grid-template-columns: 1fr auto 1fr; gap: 1.25rem; }
@@ -1468,11 +1232,10 @@ details.pub-abstract-details[open] > summary::before {
 
 /* Research: presentations */
 .pres-entry { display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: start; }
-.pres-tag { margin-top: .2rem; padding: .1rem 0; text-align: center; border: 1px solid #DDD5CA; font-size: .78rem; font-weight: 600; color: #001E44; }
-.pres-tag.talk { border-color: #1E407C; }
+
 .pres-cite { font-size: .95rem; line-height: 1.6; }
 .pres-venue { color: #666666; }
-@media (max-width: 600px) { .pres-entry { grid-template-columns: 1fr; gap: .35rem; } .pres-tag { width: 64px; } }
+@media (max-width: 600px) { .pres-entry { grid-template-columns: 1fr; gap: .35rem; } }
 
 /* CV page: boxed documents with a blank tab, sunburst centered between */
 .cv-box { position: relative; border: 1px solid #DDD5CA; background: #FFFFFF; padding: 2.75rem 1.75rem 1.75rem; display: flex; flex-direction: column; align-items: center; gap: .9rem; text-align: center; }

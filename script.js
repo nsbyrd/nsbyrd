@@ -54,3 +54,6 @@ document.querySelectorAll('.pub-copy-citation').forEach(btn => {
         });
     });
 });
+
+// Footer year
+document.querySelectorAll('.footer-year').forEach(el => { el.textContent = new Date().getFullYear(); });
