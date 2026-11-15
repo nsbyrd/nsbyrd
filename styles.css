@@ -1374,3 +1374,15 @@ details.pub-abstract-details[open] > summary::before {
 
 .btn-arrow { margin-left: .4rem; }
 .gem + .hero-rays { margin: 0 auto .4rem; }
+
+/* Contact rows: tint image logos to match the link color */
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+.contact-row span:nth-of-type(1).contact-icon { flex-grow: 0; }
+.contact-row .contact-icon + span { flex-grow: 1; }
