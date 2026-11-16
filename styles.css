@@ -1288,3 +1288,43 @@ hr {
   .lightbox-prev { order: 1; }
   .lightbox-next { order: 2; }
 }
+
+/* Update 4: experience timeline */
+.xp-timeline { position: relative; height: 230px; margin-top: 2.5rem; }
+.xp-timeline::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%;
+  height: 1px; background: #DDD5CA;
+}
+.xp-list { list-style: none; margin: 0; padding: 0; }
+.xp-item {
+  position: absolute; left: var(--pos); width: 210px;
+  display: flex; flex-direction: column; gap: .1rem;
+}
+.xp-item.above { bottom: 50%; padding-bottom: 18px; }
+.xp-item.below { top: 50%; padding-top: 18px; }
+/* diamond on the line */
+.xp-item::before {
+  content: ""; position: absolute; left: -6px; width: 10px; height: 10px;
+  background: #FFFFFF; border: 1px solid #8A8074; transform: rotate(45deg); z-index: 1;
+}
+.xp-item.above::before { bottom: -6px; }
+.xp-item.below::before { top: -6px; }
+/* short tick from diamond to label */
+.xp-item::after { content: ""; position: absolute; left: 0; width: 1px; height: 12px; background: #DDD5CA; }
+.xp-item.above::after { bottom: 0; }
+.xp-item.below::after { top: 0; }
+.xp-dates { font-size: .8rem; font-weight: 600; color: #8A8074; }
+.xp-role { font-size: .9rem; font-weight: 700; color: #001E44; line-height: 1.35; }
+.xp-org { font-size: .8rem; color: #666666; }
+/* the timeline spans both columns of the Applied research block */
+.work-applied > .xp-timeline { grid-column: 1 / -1; margin-top: 0; }
+
+/* Small screens: stack as a simple vertical list on a left rail */
+@media (max-width: 900px) {
+  .xp-timeline { height: auto; padding-left: 1.25rem; }
+  .xp-timeline::before { top: 0; bottom: 0; left: 4px; right: auto; width: 1px; height: auto; }
+  .xp-list { display: flex; flex-direction: column-reverse; gap: 1rem; }
+  .xp-item, .xp-item.above, .xp-item.below { position: relative; left: auto; top: auto; bottom: auto; width: auto; padding: 0; }
+  .xp-item::before, .xp-item.above::before, .xp-item.below::before { left: calc(-1.25rem - 1px); top: .3rem; bottom: auto; }
+  .xp-item::after { display: none; }
+}
