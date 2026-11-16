@@ -1328,3 +1328,6 @@ hr {
   .xp-item::before, .xp-item.above::before, .xp-item.below::before { left: calc(-1.25rem - 1px); top: .3rem; bottom: auto; }
   .xp-item::after { display: none; }
 }
+
+/* Home: line up the Contact heading and divider with Hello! */
+@media (min-width: 769px) { .contact-section { margin-top: -2rem; } }
